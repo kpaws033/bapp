@@ -4,7 +4,7 @@ import controller
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-dynamo_client = boto3.client('dynamodb')
+dynamo_client = boto3.client('dynamodb' region_name='eu-west-2')
 
 app = Flask(__name__)
 CORS(app)
